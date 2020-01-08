@@ -2,13 +2,14 @@
 import os
 import numpy as np
 
-from reltest.tf_models.load_model import get_log_density, plot_density,plot_density_hist,plot_samples_map
+from tf_models.load_model import get_log_density, plot_density,plot_density_hist,plot_samples_map
+from tf_models.mixture import GMM_Fit
+
 from reltest.mctest import MCTestPSI, MCTestCorr
-from reltest.ex.helper import load_crime_dataset,summary
-from reltest.ksd import KSD_U, KSD_Linear, ksd_med_heuristic
+from tf_models.helper import load_crime_dataset
+from reltest.ksd import KSD_U, KSD_Linear, med_heuristic
 from reltest.kernel import KGauss, KIMQ
 from reltest import density
-from reltest.tf_models.mixture import GMM_Fit
 from reltest.density import from_tensorflow_to_UD
 
 import matplotlib.pyplot as plt
@@ -36,7 +37,7 @@ for i in range(n_trials):
     test_set = test(2000, i)
     mctest = MCTestPSI(test_set)
     corrtest = MCTestCorr(test_set)
-    med = ksd_med_heuristic(test_set)
+    med = med_heuristic(test_set)
     ksd_u = KSD_U(KGauss(med))
     test_set = test_set.astype(np.float32)
     mctest_res = mctest.perform_tests(candidate_models, ksd_u)
