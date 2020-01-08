@@ -2,11 +2,10 @@
 import os
 import numpy as np
 
-from tf_models.load_model import get_log_density, plot_density,plot_density_hist,plot_samples_map
+from tf_models.load_model import get_log_density, plot_density,plot_density_hist,plot_samples_map,load_crime_dataset
 from tf_models.mixture import GMM_Fit
 
 from reltest.mctest import MCTestPSI, MCTestCorr
-from tf_models.helper import load_crime_dataset
 from reltest.ksd import KSD_U, KSD_Linear, med_heuristic
 from reltest.kernel import KGauss, KIMQ
 from reltest import density

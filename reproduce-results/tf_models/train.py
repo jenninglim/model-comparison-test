@@ -6,7 +6,7 @@ import tensorflow_probability as tfp
 from .flow import OneGaussMAF, FivGaussMAF
 import sys
 from kgof import glo, util
-from .helper import load_crime_dataset
+from .load_model import load_crime_dataset
 from .config import CONFIG
 
 ## TRAINING HYPERPARAMETERS
