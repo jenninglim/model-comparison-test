@@ -9,8 +9,8 @@ comparison. The algorithm is described in our [paper](https://arxiv.org/abs/1910
 
 ## How to install?
 
-First, switch to the right environment. If you use Anaconda, then you can do
-this with `conda activate name_of_environment`. The package can be installed
+Requires ```numpy```, ```autograd```, ```matplotlib``` and ```SciPy```.
+The package can be installed
 with `pip` command. 
 
     pip install -e /path/to/the/folder/of/this/repo/after/clone
