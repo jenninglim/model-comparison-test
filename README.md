@@ -31,7 +31,14 @@ See ```reproduce-results```.
 
 ## Disclaimer
 
-The $p$-values produced from the modules may not be accurate. At the time of
+The current implementation relies on an accurate approximation of the inverse CDF
+in the tail regions of the truncated normal 
+(see [6](https://www.iro.umontreal.ca/~lecuyer/myftp/papers/truncated-normal-book-chapter.pdf)).
+The implementation uses the inverse CDF to calculate the rejection threshold. If
+the test statistic is greater than the rejection threshold, we reject the null
+hypothesis.
+
+The p-values produced from the modules may not be accurate. At the time of
 writting this code there were several problems with
 the  ```scipy.stats.truncnorm``` module. See 
 [1](https://github.com/scipy/scipy/issues/2477), 
@@ -40,10 +47,6 @@ the  ```scipy.stats.truncnorm``` module. See
 [4](https://github.com/scipy/scipy/issues/10092). This may have been fixed in
 the pull request [5](https://github.com/scipy/scipy/pull/10104) in SciPy 1.4.0.
 
-The current implementation relies on an accurate approximation of the inverse CDF
-in the tail regions of the truncated normal 
-(see [6](https://www.iro.umontreal.ca/~lecuyer/myftp/papers/truncated-normal-book-chapter.pdf)).
-The inverse CDF is used to calculate the rejection threshold.
 
 ## See also
 
