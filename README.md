@@ -50,6 +50,6 @@ the pull request [5](https://github.com/scipy/scipy/pull/10104) in SciPy 1.4.0.
 
 ## See also
 
-* Kernel Relative Test of Fit: [Code](https://github.com/wittawatj/kernel-gof) [Paper](https://arxiv.org/abs/1810.11630)
+* Kernel Relative Test of Fit: [Code](https://github.com/wittawatj/kernel-mod) [Paper](https://arxiv.org/abs/1810.11630)
 * Kernel Goodness of Fit: [Code](https://github.com/wittawatj/kernel-gof), [Paper](https://arxiv.org/abs/1705.07673)
 
